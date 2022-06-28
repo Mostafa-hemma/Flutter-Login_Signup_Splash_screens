@@ -1,0 +1,34 @@
+Row(
+          children: <Widget>[
+            Expanded(
+              flex: 1,
+              //SizedBox(height: 20.0),
+              child: CountryCodePicker(
+                onChanged: print,
+                // Initial selection and favorite can be one of code ('IT') OR dial_code('+39')
+                initialSelection: 'IT',
+                favorite: ['+39', 'FR'],
+                // optional. Shows only country name and flag
+                showCountryOnly: false,
+                // optional. Shows only country name and flag when popup is closed.
+                showOnlyCountryWhenClosed: false,
+                // optional. aligns the flag and the Text left
+                alignLeft: false,
+              ),
+            ),
+            Expanded(
+              flex: 3,
+              //SizedBox(height: 20.0),
+              child: text_field(
+                  width: 10,
+                  height: 10,
+                  textInputType: TextInputType.emailAddress,
+                  hinttext: "Eg. example@gmail.com",
+                  bordercolor: Colors.teal,
+                  borderwidth: 20,
+                  borderraduis: 5.0,
+                  labeltext: "Email"),
+            ),
+          ],
+        ),
+      
